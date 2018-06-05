@@ -1,0 +1,88 @@
+$light-gray: #d1dbe2
+$dark-gray: #434b50
+$bg-gray: #989898
+
+
+html,body
+  height: 100%
+
+body
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+
+img
+  max-width: 100%
+
+small
+  text-align: center
+  padding: 1rem 0 0
+
+ul.align-right
+  float: right
+
+
+
+.logo
+  height: 2rem
+
+.stage
+  background: url('../img/vaishu-wallpaper.jpg') center center no-repeat
+  background-size: cover
+  width: 100%
+  height: 100%
+  color: white
+  display: flex
+  align-items: center
+
+.stage-caption
+  background: rgba(0,0,0,0.7)
+  font-size: 1.4rem
+  padding: .2rem 2rem
+  max-width: 60rem
+
+h2,h3,h4,h5
+  color: $dark-gray
+h1
+  color: $light-gray
+
+p
+  padding: 0
+
+.row.feature-container
+  padding: 5rem 0
+
+.row.feature-container-two
+  background-color: $dark-gray
+  color: white
+  padding: 8rem 6rem
+
+#feature-five
+  @extend .row.feature-container
+
+#feature-four
+  background-color: $bg-gray
+  padding: 2rem 0
+  color: white
+  img
+    margin-bottom: -2rem
+
+.blockquo
+  font-size: 2rem
+  color: white
+
+footer
+  @extend .row.feature-container-two
+  padding: 2rem 0
+  li
+    list-style: none
+    a
+      color: $light-gray
+      &:hover
+        color: white
+        text-decoration: none
+
+.text-lg-center
+  background-color: darken($dark-gray,10%)
+  color: white
+  padding: 2rem 10rem
+  margin-top: 7rem
