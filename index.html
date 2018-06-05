@@ -4,14 +4,15 @@
 <head>
   <meta charset="utf-8">
   <title>Vaishnavi my baby site</title>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <link href="https://fonts.googleapis.com/css?family=Sunflower:300,500,700" rel="stylesheet">
   
   <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
 <body>
   
-  <div class="masonary-conainer">
+  <div class="masonary-container">
     <div class="masonary__wrapper">
       <div class="masonary__wrapper__images">
         <img class="image-1" src= "img/10.jpg">
@@ -33,7 +34,7 @@
     <div class="container">
       <h1 class="main-heading">10 month old Vaishnavi</h1>
       <div class="row">
-        <div class="col-6">
+        <div class="col-6 video">
           <iframe width="100%" height="315" src="https://www.youtube.com/embed/hTZL-1lf0po"
           frameborder="0" allowfullscreen></iframe>
         </div>
@@ -53,7 +54,7 @@
     <section class="stories">
       <div class="container">
         <div class="row">
-          <div class="col-4">
+          <div class="col-4 stories__text">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt odio, et 
               eius officiis, explicabo tempore vero quasi, dolores natus sed quidem voluptatum aspernatur 
               officia. Eaque quam praesentium iure iste laborum nostrum necessitatibus architecto dolore fugiat, 
@@ -64,8 +65,8 @@
             </div>
             <div class="col-2">
               </div>
-            <div class="col-6">
-              <img src="//unsplash.it/600/300" alt="">
+            <div class="col-6 stories__img">
+              <img class="img-responsive" src="img/vaishnavi.jpg" alt="">
             </div>
           </div>
         </div>
@@ -74,10 +75,10 @@
     <section class="image-section">
       <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div class="col-6 image-section__img">
             <img src="img/vaishu-princess.png" alt="">
           </div>
-          <div class="col-6">
+          <div class="col-6 image-section__text">
               <h3 class="main-heading">10 month old Vaishnavi</h3>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, veritatis repellat? 
                 Reprehenderit nihil quam voluptatem odio animi! Nostrum laboriosam impedit ullam ad facilis 
@@ -95,23 +96,28 @@
     <footer>
       <div class="watch-list">
           <div class="row">
-              <div class="col-4">
-                <svg class="play">
-                  <use xlink:href="img/sprite.svg#icon-play"></use>
-                </svg>
-                <svg class="camera">
-                  <use xlink:href="img/sprite.svg#icon-video-camera"></use>
-                  </svg>
-              </div>
-              <div class="col-4">
+              <div class="col-6 p-lr text"> 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                   Veniam consequuntur recusandae, itaque pariatur ipsum iusto non 
                   unde facere nihil omnis ducimus, similique suscipit minima, et culpa 
                   distinctio exercitationem accusamus. Consequatur illum maiores quia 
                   facere nam earum quas laudantium laborum eos?</p>
+                  <div class="svg-icons">
+                    <a target="_blank" href="https://www.youtube.com/channel/UCt_NH_8XlNnDs-nyvuGk4pw">
+                      <svg class="play">
+                        <use xlink:href="img/sprite.svg#icon-play"></use>
+                      </svg>
+                      </a>
+                      <a target="_blank" href="https://www.youtube.com/channel/UCt_NH_8XlNnDs-nyvuGk4pw">
+                      <svg class="camera">
+                        <use xlink:href="img/sprite.svg#icon-video-camera"></use>
+                        </svg>
+                      </a>
+                  </div>
+                 
               </div>
-              <div class="col-4">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/P88xRkOKgOk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <div class="col-6 p-lr">
+                <iframe width="350" height="315" src="https://www.youtube.com/embed/P88xRkOKgOk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                   </div>
             </div>
       </div>    

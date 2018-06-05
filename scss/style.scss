@@ -1,11 +1,9 @@
+@import 'mixin';
+
 /*********variables*************/
 
 $primary-color:palevioletred;
 
-@mixin section-padding{
-  padding: 7rem 0;
-
-}
 
 /*************reset and base**********/
 *,::after,::before{
@@ -14,10 +12,32 @@ $primary-color:palevioletred;
     box-sizing: border-box;
   }
 
+
+html {
+  /* Setting font-size to 62.5% allows 1rem to be 10px */
+  // Setting font size allows us to size the entire page this is why it stays in base and does not go into typography
+  font-size: 62.5%;
+  // Media queries
+  @include respond(tab-land) {
+  font-size: 56.25%; //1rem = 9px, 9/16 = 56.25%;
+  }
+  @include respond(tab-port) {
+  font-size: 50%; //1rem = 8px, 8/16 = 50%
+  }
+  @include respond(phone) {
+  font-size: 40%; //1rem = 4.8px
+  }
+  @include respond(big-desktop) {
+  font-size: 75%; //1rem = 12px 12/16 = 75%;
+  }
+ }
+ 
+
   body{
     font-family: 'Sunflower', sans-serif;
     color: #444;
-    line-height: 2rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
   }
   h1,h2,h3,h4,h5{
     color: palevioletred;
@@ -44,12 +64,18 @@ $primary-color:palevioletred;
   .container{
     margin: 0 auto;
     width: calc(100% - 20rem);
+    @include respond(tab-port){
+      width: calc(100% - 2rem);
+
+    }
   }
 
   img{
     max-width: 100%;
   }
-
+.img-responsive{
+  max-width: 40rem;
+}
   .d-block{
     display: block;
   }
@@ -88,6 +114,10 @@ $primary-color:palevioletred;
       transform: translateY(.3rem);
     }
   }
+
+  
+  
+  
 
   /********************12 column layout implimentaion*************/
   .row{
@@ -143,7 +173,7 @@ $primary-color:palevioletred;
   }
 /***************masonary************/
 
-  .masonary-conainer{
+  .masonary-container{
     position: relative;
     width: 100%;
     object-fit: cover;
@@ -158,6 +188,7 @@ $primary-color:palevioletred;
     font-size: 3rem;
     p{
       margin-bottom: 3rem;
+      line-height: 3rem;
     }
   }
   
@@ -233,22 +264,47 @@ $primary-color:palevioletred;
 
   /********** video section************/
 
+
   .video-section{
     background: rgba(171, 171, 171, 0.577);
     @include section-padding;
+
+    @include respond(tab-port){
+      .video{
+        flex: 0 0 calc(100%/ 12* 12);
+      }
+    }
 
     &__text{
       a{
         display: inline-flex;
         margin: 2rem 0;
       }
+      @include respond(tab-port){
+        flex: 0 0 calc(100%/ 12* 12);
+        padding: 0;
+        margin: 0;
+    }
     }
   }
+    
+  
 
   /*********** stories section*********/
 
 .stories{
   @include section-padding;
+
+  &__text{
+    @include respond(tab-port){
+      flex: 0 0 calc(100%/ 12* 12);
+    }
+  }
+  &__img{
+    @include respond(tab-port){
+      flex: 0 0 calc(100%/ 12* 12);
+    }
+  }
 
 }
 
@@ -261,6 +317,23 @@ $primary-color:palevioletred;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
   margin-bottom: -15rem;
   padding-bottom: 10rem;
+  @include respond(phone){
+    margin-bottom: -25rem;
+    padding-bottom: 20rem;
+
+
+  }
+
+  &__text{
+  @include respond(phone){
+    flex: 0 0 calc(100%/12 *12);
+   }
+  }
+  &__img{
+    @include respond(phone){
+      flex: 0 0 calc(100%/12 *12);
+     }
+    }
 }
 
 
@@ -270,10 +343,29 @@ footer{
   display: block;
   background: $primary-color;
   padding-top: 20rem;
-}
-.watchlist{
+  @include respond(phone){
+    padding-top: 30rem;
+
+  }
+
+  .text{
+    @include respond(phone){
+    flex: 0 0 calc(100%/12*12);
+    }
+  }
 }
 
-svg{
-  fill: white;
+.svg-icons{
+  @include respond(phone){
+    margin: 0 auto;
+  }
+
+  display: flex;
+  justify-content: center;
+
+  svg{
+    fill: white;
+    width:4rem;
+    padding-right: 1rem;
+  }
 }
